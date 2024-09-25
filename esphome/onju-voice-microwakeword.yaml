@@ -248,8 +248,8 @@ voice_assistant:
         effect: speaking
   on_end:
     - wait_until:
-        not:
-          media_player.is_playing:
+        media_player.is_idle: onju_out
+        
     - script.execute: reset_led
     - if:
         condition:
