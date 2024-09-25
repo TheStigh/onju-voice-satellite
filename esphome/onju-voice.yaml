@@ -189,8 +189,7 @@ voice_assistant:
   on_end:
     - delay: 100ms
     - wait_until:
-        not:
-          media_player.is_playing: onju_out
+        media_player.is_idle: onju_out
     - script.execute: reset_led
   on_timer_started:
     - light.turn_on:
